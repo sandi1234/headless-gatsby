@@ -17,11 +17,11 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: process.env.DEPLOY_URL
-          ? "https://strapi-gatsby-postgresql-bsc.herokuapp.com"
+          ? "https://strapi-cms-bsc.herokuapp.com/"
           : "http://localhost:1337",
         // apiURL: "http://localhost:1337",
         queryLimit: 1000, // Default to 100
-        contentTypes: [`programmingskill`, `Profileinformation`, `user`],
+        contentTypes: [`programmingskill`, `profileinformation`, `user`],
         // Possibility to login with a strapi user, when content types are not publically available (optional).
       },
     },
