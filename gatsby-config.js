@@ -17,7 +17,7 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: process.env.DEPLOY_URL
-          ? "https://strapi-cms-bsc.herokuapp.com/"
+          ? "https://strapi-cms-bsc.herokuapp.com"
           : "http://localhost:1337",
         // apiURL: "http://localhost:1337",
         queryLimit: 1000, // Default to 100
