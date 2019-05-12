@@ -3,10 +3,12 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Profile from "../templates/profile"
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <Profile profile={data.strapiProfileinformation} />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
@@ -35,6 +37,19 @@ export const pageQuery = graphql`
           icon
         }
       }
+    }
+
+    strapiProfileinformation {
+      id
+      profileImage {
+        id
+        childImageSharp {
+          fixed(width: 200, height: 125) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      description
     }
   }
 `

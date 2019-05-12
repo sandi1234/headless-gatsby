@@ -9,7 +9,7 @@ const UserTemplate = ({ data }) => (
       {data.strapiUser.programmingskills.map(skill => (
         <li key={skill.id}>
           <h2>
-            <Link to={`/Programskill_${skill.id}`}>{skill.title}</Link>
+            <Link to={`/Programmingskill_${skill.id}`}>{skill.title}</Link>
           </h2>
           <p>{skill.level}</p>
         </li>
