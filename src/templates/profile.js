@@ -8,6 +8,7 @@ class Profile extends Component {
       <Fragment>
         <Img fixed={profile.profileImage.childImageSharp.fixed} />
         <h1>{profile.description}</h1>
+        <div>{profile.content}</div>
       </Fragment>
     )
   }
